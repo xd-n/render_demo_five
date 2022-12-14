@@ -6,6 +6,7 @@ import pandas as pd
 df = pd.read_csv("Berlin_crimes.csv")
 
 app = Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
+server = app.server
 
 modal = html.Div(
     [
@@ -152,4 +153,3 @@ def toggle_modal(n1, n2, is_open):
 if __name__ == "__main__":
     app.run_server(debug=True)
 
-# https://youtu.be/X3OuhqS8ueM
